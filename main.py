@@ -2,10 +2,6 @@ import string
 import re
 
 def has_repeating_number_patterns(password):
-    """
-    Detects repeated numeric patterns (e.g., 111, 123123, 456456)
-    Returns True if found.
-    """
     # Pattern 1: Three or more of the same digit (e.g., 111, 2222)
     if re.search(r'(\d)\1{2,}', password):
         return True
@@ -130,3 +126,4 @@ if __name__ == "__main__":
         check_password_strength(password)
     except KeyboardInterrupt:
         print("\nOperation cancelled by user.")
+
